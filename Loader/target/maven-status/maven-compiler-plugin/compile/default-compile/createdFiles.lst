@@ -1,0 +1,5 @@
+edu\ucla\library\libservices\ucpath\db\mappers\EmployeeMapper.class
+edu\ucla\library\libservices\ucpath\generators\EmployeeGenerator.class
+edu\ucla\library\libservices\ucpath\bean\Employee.class
+edu\ucla\library\libservices\ucpath\main\Loader.class
+edu\ucla\library\libservices\ucpath\db\source\DataSourceFactory.class
