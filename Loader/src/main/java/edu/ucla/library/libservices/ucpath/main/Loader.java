@@ -60,7 +60,7 @@ public class Loader
     BufferedWriter writer;
     try
     {
-      writer = new BufferedWriter( new FileWriter( new File( "C:\\Temp\\patrons\\employees.txt" )) );
+      writer = new BufferedWriter( new FileWriter( new File( props.getProperty( "emps.file" ) )) );
       
       for ( Employee theEmp : employees )
       {
