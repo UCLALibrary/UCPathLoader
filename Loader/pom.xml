@@ -12,23 +12,16 @@
       <url>http://mvnrepository.com</url>
     </repository>
     <repository>
-      <id>maven.oracle.com</id>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <url>https://maven.oracle.com</url>
-      <layout>default</layout>
+      <id>repo1.maven.org</id>
+      <url>https://repo1.maven.org/maven2/</url>
     </repository>
   </repositories>
-  <pluginRepositories>
+  <!--pluginRepositories>
     <pluginRepository>
       <id>maven.oracle.com</id>
       <url>https://maven.oracle.com</url>
     </pluginRepository>
-  </pluginRepositories>
+  </pluginRepositories-->
   <build>
     <resources>
       <resource>
@@ -47,7 +40,8 @@
         <directory>src/main/resources</directory>
         <targetPath>${project.build.directory}</targetPath>
         <includes>
-          <include>log4j.properties</include>
+          <include>log4j2.xml</include>
+          <!--include>log4j.properties</include-->
         </includes>
       </resource>
     </resources>
@@ -66,14 +60,33 @@
   </build>
   <dependencies>
     <dependency>
+      <groupId>com.oracle.ojdbc</groupId>
+      <artifactId>ojdbc8</artifactId>
+      <version>19.3.0.0</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.oracle.ojdbc</groupId>
+      <artifactId>ucp</artifactId>
+      <version>19.3.0.0</version>
+      <type>jar</type>
+      <scope>compile</scope>
+    </dependency>
+    <!--dependency>
       <groupId>com.oracle.jdbc</groupId>
       <artifactId>ojdbc7</artifactId>
       <version>12.1.0.2</version>
+    </dependency-->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.11.2</version>
     </dependency>
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
-      <version>2.13.1</version>
+      <version>2.11.2</version>
     </dependency>
     <dependency>
       <groupId>commons-logging</groupId>
